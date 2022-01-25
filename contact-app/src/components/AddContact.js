@@ -12,11 +12,15 @@ class AddContact extends React.Component {
             alert("All the fileds are mandatory!");
             return;
         }
-    }
+        this.props.addContactHandler(this.state);
+        this.setState({name: "", email: "" });
+        console.log(this.state);
+
+    };
     render() {
         return (
             <div className="ui main">
-                <h2>Add Contact</h2>
+                <h2 >Add Contact</h2>
                 <form className="ui form" onSubmit={this.add}>
                     <div className="field">
                         <label>Name</label>
