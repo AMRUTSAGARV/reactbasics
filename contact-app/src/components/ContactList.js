@@ -4,18 +4,19 @@ const ContactList = (props) => {           // if we want to pass the data from p
     console.log(props);
 
 
-const deleteContactHandler = (id) => {
+const deleteConactHandler = (id) => {
     props.getContactId(id);
 }
     const renderContactList = props.contacts.map((contact) => {
-        return 
-            <ContactCard contact={contact} clickHandler = {deleteContactHandler } key ={ contact.id}/>
+        return (
+            <ContactCard contact={contact} 
+            clickHandler = {deleteConactHandler } 
+            key ={contact.id}
+            />
         
+    );        
     });
-    return 
-        <div className="ui called list">
-            {renderContactList}
-        </div>
+    return <div className="ui called list">{renderContactList}</div>;
     
 };
 
