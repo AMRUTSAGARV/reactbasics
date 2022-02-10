@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import SeriesCard from './SeriesCard';
-import Loader from 'react-loader-spinner';
+import * as Loader from 'react-loader-spinner';
 import { Consumer } from './Context';
 
 export default class PopularSeries extends Component {

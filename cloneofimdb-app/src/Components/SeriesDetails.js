@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import Service from './Service';
 import env from './Environment';
-import Loader from 'react-loader-spinner';
+import * as Loader from 'react-loader-spinner';
 
-export default class SeriesDetails extends Component {
+export  default class SeriesDetails extends Component {
 
     constructor(props) {
         super(props)

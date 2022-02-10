@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import {BrowserRouter as Router , Route} from 'react-router-dom';
+import {BrowserRouter as Router , Route, Routes} from 'react-router-dom';
 import Header from './Components/Header';
 import Home from "./Components/Home";
 import Trending from './Components/Trending';
@@ -26,10 +26,12 @@ const newHistory = createBrowserHistory();
 function App() {
   return (
     <Provider history={newHistory} >
+      
       <Router>
       <Header/>
       <div className="container-fluid px-1">
       <div className="container py-4 px-1">
+        <Routes>
         <Route exact path="/" component={Home} />
         <Route exact path="/trending" component={Trending} />
         <Route exact path="/toprated" component={TopRated} />
@@ -45,6 +47,7 @@ function App() {
         <Route exact path="/seriesDetails/:id" component={SeriesDetails} />
         <Route exact path="/seriesSimilar/:id" component={SeriesSimilar} />
         <Route exact path="/search" component={Search} />
+        </Routes>
       </div>
       </div>
       <Footer/>

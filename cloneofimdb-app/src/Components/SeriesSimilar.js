@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Service from './Service';
-import Loader from 'react-loader-spinner';
+import * as Loader from 'react-loader-spinner';
 import SeriesCard from './SeriesCard';
 
 export default class SeriesSimilar extends Component {

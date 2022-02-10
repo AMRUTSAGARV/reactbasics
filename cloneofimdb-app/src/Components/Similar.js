@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Service from './Service';
 import Card from './Card';
-import Loader from 'react-loader-spinner';
+import * as Loader from 'react-loader-spinner';
 
 export default class Similar extends Component {
     constructor(props) {
