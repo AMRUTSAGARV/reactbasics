@@ -74,3 +74,6 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
  <!-- a fantastic React login and sign up user interface template using Bootstrap 4. This login & sign up UI template will surely help you in building simple react authentication system.
 
 Login system typically allows an individual us to gain access in any software system securely. Sign up is the process which enables a particular user to register in any web and mobile application. -->
+
+
+<!-- Bootstrap 4 UI framework, and it provides beautiful UI components. -->
