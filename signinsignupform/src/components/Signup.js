@@ -16,7 +16,7 @@ import FormControl from "@mui/material/FormControl";
 import FormLabel from "@mui/material/FormLabel";
 
 function Signup() {
-  const paperStyle = { padding: "30px 20px", width: 300, margin: "20px auto" };
+  const paperStyle = { padding: 20, width: 300, margin: "0 auto" };
   const headerStyle = { margin: 0 };
   const avatarStyle = { backgroundColor: "darkcyan" };
   const btnstyle = { margin: "8px 0" };

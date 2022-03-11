@@ -15,9 +15,9 @@ import {
 function Login() {
   const paperStyle = {
     padding: 20,
-    height: "70vh",
-    width: 280,
-    margin: "20px auto",
+    height: "57vh",
+    width: 300,
+    margin: "0 auto",
   };
 
   const avatarStyle = { backgroundColor: "darkcyan" };
@@ -25,7 +25,7 @@ function Login() {
 
   return (
     <Grid>
-      <Paper elevation={10} style={paperStyle}>
+      <Paper style={paperStyle}>
         <Grid align="center">
           <Avatar style={avatarStyle}>
             <LockSharpIcon />
@@ -62,7 +62,7 @@ function Login() {
           <Link href="#">Forgot Password ?</Link>
         </Typography>
         <Typography>
-          Do you have an account ?<Link href="#">Sign Up ?</Link>
+          Do you have an account ?<Link href="#">Sign Up</Link>
         </Typography>
       </Paper>
     </Grid>
