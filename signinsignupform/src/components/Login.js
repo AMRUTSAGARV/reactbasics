@@ -12,7 +12,7 @@ import {
   Button,
 } from "@material-ui/core";
 
-function Login() {
+function Login({ handleChange }) {
   const paperStyle = {
     padding: 20,
     height: "57vh",
@@ -62,7 +62,10 @@ function Login() {
           <Link href="#">Forgot Password ?</Link>
         </Typography>
         <Typography>
-          Do you have an account ?<Link href="#">Sign Up</Link>
+          Do you have an account ?
+          <Link href="#" onClick={() => handleChange("event", 1)}>
+            Sign Up
+          </Link>
         </Typography>
       </Paper>
     </Grid>
