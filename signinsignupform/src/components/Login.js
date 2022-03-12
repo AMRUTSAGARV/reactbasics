@@ -15,7 +15,7 @@ import {
 function Login({ handleChange }) {
   const paperStyle = {
     padding: 20,
-    height: "57vh",
+    height: "56.5vh",
     width: 300,
     margin: "0 auto",
   };
@@ -62,7 +62,7 @@ function Login({ handleChange }) {
           <Link href="#">Forgot Password ?</Link>
         </Typography>
         <Typography>
-          Do you have an account ?
+          Don't have an account ?
           <Link href="#" onClick={() => handleChange("event", 1)}>
             Sign Up
           </Link>
