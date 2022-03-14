@@ -7,8 +7,8 @@ import "@tomtom-international/web-sdk-maps/dist/maps.css";
 const App = () => {
   const mapElement = useRef();
   const [map, setMap] = useState({});
-  const [longitude, setLongitude] = useState(-0.112869);
-  const [latitude, setLatitude] = useState(51.504);
+  const [longitude, setLongitude] = useState(78.9629);
+  const [latitude, setLatitude] = useState(20.5937);
 
   //india= lat:20.5937, lon:78.9629
   //kerala= lat:10.8505, long:76.2711
@@ -24,7 +24,7 @@ const App = () => {
 
   const drawRoute = (geoJson, map) => {
     if (map.getLayer("route")) {
-      map.removelayer("route");
+      map.removeLayer("route");
       map.removeSource("route");
     }
     map.addLayer({
@@ -36,7 +36,7 @@ const App = () => {
       },
       paint: {
         "line-color": "red",
-        "line-width": 6,
+        "line-width": 5,
       },
     });
   };
