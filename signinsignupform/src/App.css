@@ -36,3 +36,7 @@
     transform: rotate(360deg);
   }
 }
+
+.MuiFormHelperText-root {
+  color: rgb(255, 61, 61) !important;
+}

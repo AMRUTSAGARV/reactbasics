@@ -11,3 +11,5 @@ function App() {
 }
 
 export default App;
+
+// formic is a library which gives the flexibility to manage the state

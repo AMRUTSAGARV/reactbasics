@@ -11,6 +11,8 @@ import {
   Typography,
   Button,
 } from "@material-ui/core";
+import { Formik, Form, Field, ErrorMessage } from "formik";
+import * as Yup from "yup";
 
 function Login({ handleChange }) {
   const paperStyle = {
@@ -22,6 +24,26 @@ function Login({ handleChange }) {
 
   const avatarStyle = { backgroundColor: "darkcyan" };
   const btnstyle = { margin: "8px 0" }; //which helped sign in button to come down a little and aligned perfectly
+  const initialValues = {
+    username: "",
+    password: "",
+    remember: false,
+  };
+  const validationSchema = Yup.object().shape({
+    username: Yup.string()
+      .email("Please enter valid email")
+      .required("Required"),
+    password: Yup.string().required("Required"),
+  });
+  const onSubmit = (values, props) => {
+    console.log(values);
+    setTimeout(() => {
+      props.resetForm();
+      props.setSubmitting(false);
+    }, 2000);
+
+    console.log(values);
+  };
 
   return (
     <Grid>
@@ -32,32 +54,53 @@ function Login({ handleChange }) {
           </Avatar>
           <h2>Sign In</h2>
         </Grid>
-        <TextField
-          label="Username"
-          placeholder="Enter username"
-          fullWidth
-          required
-        />
-        <TextField
-          label="Password"
-          placeholder="Enter password"
-          type="password"
-          fullWidth
-          required
-        />
-        <FormControlLabel
-          control={<Checkbox name="checkedB" color="primary" />}
-          label="Remember Me"
-        />
-        <Button
-          type="submit"
-          variant="contained"
-          color="primary"
-          style={btnstyle}
-          fullWidth
+        <Formik
+          initialValues={initialValues}
+          onSubmit={onSubmit}
+          validationSchema={validationSchema}
         >
-          SIGN IN
-        </Button>
+          {(props) => (
+            <Form>
+              <Field
+                as={TextField}
+                label="Username"
+                name="username"
+                placeholder="Enter username"
+                fullWidth
+                required
+                helperText={<ErrorMessage name="username" />}
+              />
+              <Field
+                as={TextField}
+                label="Password"
+                name="password"
+                placeholder="Enter password"
+                type="password"
+                fullWidth
+                required
+                helperText={<ErrorMessage name="password" />}
+              />
+              <Field
+                as={FormControlLabel}
+                name="remember"
+                control={<Checkbox color="primary" />}
+                label="Remember Me"
+              />
+              <Button
+                type="submit"
+                variant="contained"
+                disabled={props.isSubmitting}
+                color="primary"
+                style={btnstyle}
+                fullWidth
+              >
+                {props.isSubmitting ? "Loading" : "Sign in"}
+              </Button>
+
+              {console.log(props)}
+            </Form>
+          )}
+        </Formik>
         <Typography>
           <Link href="#">Forgot Password ?</Link>
         </Typography>
@@ -73,3 +116,5 @@ function Login({ handleChange }) {
 }
 
 export default Login;
+
+// by giving Field as={TextField} we are saying to formik that we are using material ui
