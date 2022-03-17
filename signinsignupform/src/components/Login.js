@@ -25,14 +25,12 @@ function Login({ handleChange }) {
   const avatarStyle = { backgroundColor: "darkcyan" };
   const btnstyle = { margin: "8px 0" }; //which helped sign in button to come down a little and aligned perfectly
   const initialValues = {
-    username: "",
+    email: "",
     password: "",
     remember: false,
   };
   const validationSchema = Yup.object().shape({
-    username: Yup.string()
-      .email("Please enter valid email")
-      .required("Required"),
+    email: Yup.string().email("Please enter valid email").required("Required"),
     password: Yup.string().required("Required"),
   });
   const onSubmit = (values, props) => {
@@ -63,12 +61,12 @@ function Login({ handleChange }) {
             <Form>
               <Field
                 as={TextField}
-                label="Username"
-                name="username"
-                placeholder="Enter username"
+                label="email"
+                name="email"
+                placeholder="Enter email"
                 fullWidth
                 required
-                helperText={<ErrorMessage name="username" />}
+                helperText={<ErrorMessage name="email" />}
               />
               <Field
                 as={TextField}
