@@ -39,7 +39,7 @@ function Signup() {
     confirmPassword: Yup.string()
       .oneOf([Yup.ref("password")], "Password not matched")
       .required("Required"),
-    youAre: Yup.string()
+    role: Yup.string()
       .oneOf(["hotels", "ngo", "customer"], "Required")
       .required("Required"),
     termsAndConditions: Yup.string().oneOf(
@@ -101,11 +101,11 @@ function Signup() {
               />
 
               <FormControl component="fieldset" style={btnstyle}>
-                <FormLabel component="legend">You are :</FormLabel>
+                <FormLabel component="legend">Role :</FormLabel>
                 <Field
                   as={RadioGroup}
-                  aria-label="youare"
-                  name="youare"
+                  aria-label="role"
+                  name="role"
                   // name="youare"
                   style={{ display: "initial" }}
                 >
