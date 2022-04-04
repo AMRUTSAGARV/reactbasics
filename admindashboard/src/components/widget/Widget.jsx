@@ -10,7 +10,9 @@ import MonetizationOnRoundedIcon from '@mui/icons-material/MonetizationOnRounded
 const Widget = ({ type }) => {
 
 let data;
-
+//temporary
+const amount = 100
+const diff = 20
 
 switch(type){
     case "user":
@@ -61,15 +63,16 @@ switch(type){
   return (
     <div className='widget'>
         <div className='left'>
-            <span className="title">USERS</span>
-            <span className="counter">21312</span>
-            <span className="link">See all user</span>
+            <span className="title">{data.title}</span>
+            <span className="counter">{data.isMoney && "$"} {amount}</span>
+            <span className="link">{data.link}</span>
         </div>
         <div className='right'>
 <div className="percentage positive"><KeyboardArrowUpRoundedIcon/>
-20%
+{diff}%
 </div>
-<PersonOutlineRoundedIcon className='icon'/>
+{/* <PersonOutlineRoundedIcon className='icon'/> */}
+{data.icon}
 
         </div>
     </div>
