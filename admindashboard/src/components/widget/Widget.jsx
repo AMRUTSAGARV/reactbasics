@@ -20,8 +20,11 @@ switch(type){
             title:"USERS",
             isMoney: false,
             link:"See all users",
-            icon: 
-               <PersonOutlineRoundedIcon className='icon'/>,
+            icon: (
+               <PersonOutlineRoundedIcon className='icon' 
+               style={{color:'crimson', backgroundColor:"rgba(255, 0, 0, 0.2)",
+            }}
+               />),
             
         };
         break;
@@ -30,8 +33,10 @@ switch(type){
                 title:"ORDERS",
                 isMoney: false,
                 link:"View all orders",
-                icon: 
-                   <ShoppingCartCheckoutRoundedIcon className='icon'/>,
+                icon: (
+                   <ShoppingCartCheckoutRoundedIcon className='icon' 
+                   style={{color:'goldenrod', backgroundColor:"rgba(218, 165, 32, 0.2)",
+                }}/>),
                 
             };
             break;
@@ -40,8 +45,10 @@ switch(type){
                     title:"EARNINGS",
                     isMoney: true,
                     link:"View net earnings",
-                    icon: 
-                       <MonetizationOnRoundedIcon className='icon'/>,
+                    icon: (
+                       <MonetizationOnRoundedIcon className='icon' 
+                       style={{color:'green', backgroundColor: "rgba(0, 128, 0, 0.2)" ,
+                    }}/>),
                     
                 };
                 break;
@@ -50,8 +57,9 @@ switch(type){
                         title:"BALANCE",
                         isMoney: true,
                         link:"See all users",
-                        icon: 
-                           <PersonOutlineRoundedIcon className='icon'/>,
+                        icon: (
+                           <PersonOutlineRoundedIcon className='icon' style={{color:'purple', backgroundColor: "rgba(128, 0, 128, 0.2)" ,
+                        }}/>),
                         
                     };
                     break;
