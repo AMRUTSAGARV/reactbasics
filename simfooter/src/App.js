@@ -14,14 +14,19 @@ import BootstrapStar from "./components/BootstrapStar/BootstrapStar";
 import BootstrapModal from "./components/BootstrapModal/BootstrapModal";
 import AdminDashboard from "./components/Admin/AdminDashboard";
 // import WstarRating from "./components/WstarRating/WstarRating";
+import CustomizedTables from "./components/blackheader/blackheader";
+import DaisyUiTable from "./components/DaisyUI/DaisyUiTable";
 
 function App() {
   return (
     <div className="App">
       <PrimarySearchAppBar />
-      <AdminDashboard />
+      {/* <AdminDashboard /> */}
+
       {/* <BasicTable /> */}
-      <BasicRating />
+      <DaisyUiTable />
+      {/* <CustomizedTables /> */}
+      {/* <BasicRating /> */}
       {/* <TailMuiNavbar /> */}
       {/* <SearchBar placeholder="Search By Your Institution " data={BookData} /> */}
       {/* <SearchBar placeholder="Search By Your Location" data={BookData} /> */}
