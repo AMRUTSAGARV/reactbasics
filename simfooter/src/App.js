@@ -16,15 +16,16 @@ import AdminDashboard from "./components/Admin/AdminDashboard";
 // import WstarRating from "./components/WstarRating/WstarRating";
 import CustomizedTables from "./components/blackheader/blackheader";
 import DaisyUiTable from "./components/DaisyUI/DaisyUiTable";
+import ContactList from "./components/ContactList/ContactList";
 
 function App() {
   return (
     <div className="App">
       <PrimarySearchAppBar />
       {/* <AdminDashboard /> */}
-
+      <ContactList />
       {/* <BasicTable /> */}
-      <DaisyUiTable />
+      {/* <DaisyUiTable /> */}
       {/* <CustomizedTables /> */}
       {/* <BasicRating /> */}
       {/* <TailMuiNavbar /> */}
